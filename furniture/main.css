@@ -1,0 +1,153 @@
+body {
+  background: rgb(247, 215, 111);
+  display: grid;
+  color: white;
+  grid-template-areas:
+    "header"
+    "form"
+    "div1"
+    "div2"
+    "div3";
+}
+#header {
+  grid-area: header;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: fantasy;
+}
+#header-img {
+  display: block;
+  width: 100%;
+}
+nav {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+@media (min-width: 600px) {
+  #header-img {
+    width: 7%;
+  }
+  #header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+  }
+}
+#main {
+  margin-top: 10%;
+}
+
+a {
+  font-size: 20px;
+  margin-right: 20px;
+  text-decoration: none;
+  color: white;
+}
+a:hover {
+  color: red;
+}
+input[type="email"] {
+  border: 1px solid gray;
+}
+input[type="submit"] {
+  color: orange;
+  border-radius: 20px;
+  background: white;
+  font-weight: bold;
+}
+#form {
+  width: 90%;
+  font-weight: bold;
+  text-align: center;
+  grid-area: form;
+  margin: auto;
+  margin-bottom: 1%;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-gap: 5px;
+}
+#div1 {
+  grid-area: div1;
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas:
+    "sec1"
+    "sec2"
+    "sec3";
+}
+#sec1 {
+  grid-area: sec1;
+  border: 3px solid white;
+  border-radius: 5px;
+  background: rgb(240, 158, 6);
+}
+
+#sec2 {
+  grid-area: sec2;
+  border: 3px solid white;
+  border-radius: 5px;
+  background: rgb(240, 158, 6);
+}
+#sec3 {
+  grid-area: sec3;
+  border: 3px solid white;
+  border-radius: 5px;
+  background: rgb(240, 158, 6);
+}
+@media (min-width: 600px) {
+  #form {
+    width: 50%;
+  }
+  #div1 {
+    grid-template-areas: "sec1 sec2 sec3";
+  }
+}
+#div2 {
+  grid-area: div2;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+#div3 {
+  grid-area: div3;
+
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas:
+    "chair"
+    "sofa"
+    "bed";
+}
+#chair {
+  grid-area: chair;
+  border: 3px solid white;
+  border-radius: 5px;
+  background: rgb(240, 158, 6);
+}
+
+#sofa {
+  grid-area: sofa;
+  border: 3px solid white;
+  border-radius: 5px;
+  background: rgb(240, 158, 6);
+}
+#bed {
+  grid-area: bed;
+  border: 3px solid white;
+  border-radius: 5px;
+  background: rgb(240, 158, 6);
+}
+p {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+}
+@media (min-width: 600px) {
+  #div3 {
+    grid-template-areas: "chair sofa bed";
+  }
+}
